@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="log-path">logs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n}"/>
+        </Console>
+        <!--
+        <File name="MyFile" filename="log/app.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+        -->
+        <RollingFile name="trace-log" filename="${log-path}/app.log" filepattern="${log-path}/app.log.%d{dd-MM-yyyy}">        
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="error-log" filename="${log-path}/error.log" filepattern="${log-path}/error.log.%d{dd-MM-yyyy}">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="error" additivity="false">
+            <AppenderRef ref="console" />            
+        </Root>
+        <logger name="com.hwt.meter" level="debug" additivity="false">
+            <AppenderRef ref="console" level="debut" />
+            <AppenderRef ref="trace-log" level="debug" />
+            <AppenderRef ref="error-log" level="error" />
+        </logger>
+    </Loggers>
+</Configuration>
