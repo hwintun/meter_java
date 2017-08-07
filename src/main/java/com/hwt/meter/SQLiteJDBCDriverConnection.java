@@ -11,7 +11,11 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,20 +50,33 @@ public class SQLiteJDBCDriverConnection {
         }
     }
     
-    public static void query(){
+    public static List query(String sql){
+        LOGGER.info("Start: Query->" + sql);
+        List<Object> data;
+        Map<String, Object> row;
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from unit_per_charges");
+            ResultSet rs = stmt.executeQuery(sql);
             ResultSetMetaData meta = rs.getMetaData();
-            System.out.print(meta.getColumnCount());
-           
+            
+            data = new ArrayList<>();
+            row = new HashMap();
+            
+            while(rs.next()) {
+                for(int i=1; i<=meta.getColumnCount(); i++){
+                    row.put(meta.getColumnName(i), rs.getObject(meta.getColumnName(i)));
+                }
+                data.add(row);
+            }            
+            LOGGER.info("End: Query->" + sql);
+            return data;
         } catch (SQLException e) {
             e.printStackTrace();
             LOGGER.error(Arrays.toString(e.getStackTrace()));
+            return null;
         } finally {
             close();
         }
-        
     }
 }
 

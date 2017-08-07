@@ -1,57 +1,22 @@
-15:10:08.525 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:10:08.728 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:11:44.039 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:11:44.255 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:13:05.405 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:13:05.407 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - org.sqlite.JDBC
-15:13:05.407 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:14:52.399 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:14:52.417 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [Ljava.lang.StackTraceElement;@782663d3
-15:14:52.420 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:15:26.187 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:15:26.188 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [Ljava.lang.StackTraceElement;@4fb64261
-15:15:26.189 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:15:52.234 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:15:52.236 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [java.net.URLClassLoader.findClass(URLClassLoader.java:381), java.lang.ClassLoader.loadClass(ClassLoader.java:424), sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331), java.lang.ClassLoader.loadClass(ClassLoader.java:357), java.lang.Class.forName0(Native Method), java.lang.Class.forName(Class.java:264), com.hwt.meter.SQLiteJDBCDriverConnection.connect(SQLiteJDBCDriverConnection.java:27), com.hwt.meter.App.main(App.java:14)]
-15:15:52.237 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:17:38.529 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:17:38.531 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [java.net.URLClassLoader.findClass(URLClassLoader.java:381), java.lang.ClassLoader.loadClass(ClassLoader.java:424), sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331), java.lang.ClassLoader.loadClass(ClassLoader.java:357), java.lang.Class.forName0(Native Method), java.lang.Class.forName(Class.java:264), com.hwt.meter.SQLiteJDBCDriverConnection.connect(SQLiteJDBCDriverConnection.java:27), com.hwt.meter.App.main(App.java:14)]
-15:17:38.531 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-Start: AAA
-[java.net.URLClassLoader.findClass(URLClassLoader.java:381), java.lang.ClassLoader.loadClass(ClassLoader.java:424), sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331), java.lang.ClassLoader.loadClass(ClassLoader.java:357), java.lang.Class.forName0(Native Method), java.lang.Class.forName(Class.java:264), com.hwt.meter.SQLiteJDBCDriverConnection.connect(SQLiteJDBCDriverConnection.java:27), com.hwt.meter.App.main(App.java:14)]
-End: AAA
-15:35:01.123 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:35:01.125 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - []
-15:35:01.125 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:40:04.478 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:40:04.479 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [java.net.URLClassLoader.findClass(URLClassLoader.java:381), java.lang.ClassLoader.loadClass(ClassLoader.java:424), sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331), java.lang.ClassLoader.loadClass(ClassLoader.java:357), java.lang.Class.forName0(Native Method), java.lang.Class.forName(Class.java:264), com.hwt.meter.SQLiteJDBCDriverConnection.connect(SQLiteJDBCDriverConnection.java:30), com.hwt.meter.App.main(App.java:14)]
-16:40:04.480 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:40:41.023 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:40:41.226 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:40:41.227 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:40:41.227 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [org.sqlite.core.CoreConnection.checkOpen(CoreConnection.java:336), org.sqlite.jdbc4.JDBC4Connection.createStatement(JDBC4Connection.java:38), org.sqlite.jdbc3.JDBC3Connection.createStatement(JDBC3Connection.java:193), com.hwt.meter.SQLiteJDBCDriverConnection.query(SQLiteJDBCDriverConnection.java:49), com.hwt.meter.App.main(App.java:15)]
-16:41:35.195 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:41:35.407 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:41:35.407 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:41:35.408 [main] ERROR com.hwt.meter.SQLiteJDBCDriverConnection - [org.sqlite.core.CoreConnection.checkOpen(CoreConnection.java:336), org.sqlite.jdbc4.JDBC4Connection.createStatement(JDBC4Connection.java:38), org.sqlite.jdbc3.JDBC3Connection.createStatement(JDBC3Connection.java:193), com.hwt.meter.SQLiteJDBCDriverConnection.query(SQLiteJDBCDriverConnection.java:49), com.hwt.meter.App.main(App.java:15)]
-16:43:07.263 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:43:07.474 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:43:07.475 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:43:45.705 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:43:45.915 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:43:45.915 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:46:13.279 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:46:13.496 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:46:13.496 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:47:39.004 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:47:39.232 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:47:39.233 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:48:21.479 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:48:21.695 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:48:21.696 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:49:33.634 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:49:33.873 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:49:33.873 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:52:15.755 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:52:15.964 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:52:15.964 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+11:08:20.953 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:08:21.304 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:08:21.305 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+11:09:20.675 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:09:20.891 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:09:20.892 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+11:09:33.003 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:09:33.218 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:09:33.218 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:15:55.270 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+14:15:55.584 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+14:15:55.584 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:55:16.617 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+14:55:16.857 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:16:14.881 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:16:15.096 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges

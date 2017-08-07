@@ -55,9 +55,26 @@
             <version>5.0.0</version>
         </dependency>
     </dependencies>
-    <!--
+    
     <build>
-        <plugins>
+        <plugins>            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.hwt.meter.Meter</mainClass>
+                </configuration>
+            </plugin>
+
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -66,7 +83,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.hwt.meter.App</mainClass>
+                            <mainClass>com.hwt.meter.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -115,7 +132,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
         </plugins>
-    </build>
-    -->
+    </build>    
 </project>

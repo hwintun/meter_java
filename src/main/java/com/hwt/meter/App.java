@@ -12,6 +12,6 @@ package com.hwt.meter;
 public class App {
     public static void main(String[] args){
         SQLiteJDBCDriverConnection.connect();
-        SQLiteJDBCDriverConnection.query();
+        SQLiteJDBCDriverConnection.query("select * from unit_per_charges");
     }
 }
