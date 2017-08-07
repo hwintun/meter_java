@@ -5,6 +5,8 @@
  */
 package com.hwt.meter;
 
+import java.util.List;
+import java.util.Map;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -64,15 +66,16 @@ public class Charges extends javax.swing.JFrame {
 
     public void loadData() {
         jTable1.setModel(new AbstractTableModel() {
+            List<Object> data = SQLiteJDBCDriverConnection.query("select * from unit_per_charges");
             
             @Override
             public int getRowCount() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                return data.size();
             }
 
             @Override
             public int getColumnCount() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                return ((Map) data.get(0)).size();
             }
 
             @Override
