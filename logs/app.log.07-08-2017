@@ -1,0 +1,22 @@
+11:08:20.953 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:08:21.304 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:08:21.305 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+11:09:20.675 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:09:20.891 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:09:20.892 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+11:09:33.003 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+11:09:33.218 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+11:09:33.218 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:15:55.270 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+14:15:55.584 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+14:15:55.584 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:55:16.617 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:55:16.855 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+14:55:16.857 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:16:14.881 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:16:15.094 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:16:15.096 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges

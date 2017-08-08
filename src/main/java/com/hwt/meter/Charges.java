@@ -7,6 +7,10 @@ package com.hwt.meter;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,6 +25,23 @@ public class Charges extends javax.swing.JFrame {
      */
     public Charges() {
         initComponents();
+        
+        loadData();
+        ListSelectionModel rowSM = jTable1.getSelectionModel();
+        rowSM.addListSelectionListener((ListSelectionEvent e) -> {
+            if(e.getValueIsAdjusting())
+                return;
+            ListSelectionModel lsm = (ListSelectionModel) e.getSource();
+            if(lsm.isSelectionEmpty()) {
+                System.out.println("No rows are selected!");
+            } else {
+                int selectRow = lsm.getMinSelectionIndex();
+                
+                System.out.println("Row " + selectRow + " is selected!");
+                System.out.println(jTable1.getValueAt(selectRow, 1));
+                
+            }
+        });
     }
 
     /**
@@ -48,6 +69,7 @@ public class Charges extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -64,9 +86,13 @@ public class Charges extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void loadData() {
+    private void loadData() {
+        SQLiteJDBCDriverConnection.connect();
         jTable1.setModel(new AbstractTableModel() {
-            List<Object> data = SQLiteJDBCDriverConnection.query("select * from unit_per_charges");
+            Object[] result = SQLiteJDBCDriverConnection.query("select * from unit_per_charges");
+            
+            List colName = (List)result[0];
+            List data = (List)result[1];
             
             @Override
             public int getRowCount() {
@@ -75,12 +101,17 @@ public class Charges extends javax.swing.JFrame {
 
             @Override
             public int getColumnCount() {
-                return ((Map) data.get(0)).size();
+                return ((List) data.get(0)).size();
             }
 
             @Override
             public Object getValueAt(int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                return ((List) data.get(rowIndex)).get(columnIndex);
+            }
+            
+            @Override
+            public String getColumnName(int col) {
+                return colName.get(col).toString();
             }
         });
     }

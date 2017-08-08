@@ -13,9 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Vector;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -50,26 +49,35 @@ public class SQLiteJDBCDriverConnection {
         }
     }
     
-    public static List query(String sql){
+    public static Object[] query(String sql){
         LOGGER.info("Start: Query->" + sql);
+        List<Object> data1;
+        //Map<String, Object> row;
+        List<String> colName;
         List<Object> data;
-        Map<String, Object> row;
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             ResultSetMetaData meta = rs.getMetaData();
             
+            //data = new ArrayList<>();
+            //row = new HashMap();
             data = new ArrayList<>();
-            row = new HashMap();
+            colName = new ArrayList<>();
             
             while(rs.next()) {
+                List<Object> row = new ArrayList<>();
                 for(int i=1; i<=meta.getColumnCount(); i++){
-                    row.put(meta.getColumnName(i), rs.getObject(meta.getColumnName(i)));
+                    if(!colName.contains(meta.getColumnName(i))) {
+                        colName.add(meta.getColumnName(i));
+                    }                    
+                    //row.put(meta.getColumnName(i), rs.getObject(meta.getColumnName(i)));
+                    row.add(rs.getObject(meta.getColumnName(i)));
                 }
                 data.add(row);
             }            
             LOGGER.info("End: Query->" + sql);
-            return data;
+            return new Object[]{colName, data};
         } catch (SQLException e) {
             e.printStackTrace();
             LOGGER.error(Arrays.toString(e.getStackTrace()));
