@@ -1,51 +1,179 @@
-14:55:30.101 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-14:55:30.383 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:04:59.615 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:06:24.525 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:08:16.196 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:08:16.482 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:08:16.482 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:08:16.483 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:08:16.484 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:15:03.107 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:15:03.350 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:15:03.351 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:15:25.134 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:18:45.904 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:18:46.126 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:18:46.127 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:18:52.680 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:21:39.999 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:25:25.435 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:25:25.667 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:25:25.667 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:25:25.668 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:26:34.214 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:35:56.032 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:35:56.217 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:35:56.217 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:35:56.218 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:35:56.219 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:41:22.065 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:41:22.260 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:41:22.261 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:41:22.261 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:41:22.263 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:48:49.508 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:48:49.709 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:48:49.709 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:48:49.710 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:48:49.711 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-15:59:27.895 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-15:59:28.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-15:59:28.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-15:59:28.075 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-15:59:28.076 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
-16:02:37.832 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
-16:02:38.048 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
-16:02:38.049 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
-16:02:38.050 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
-16:02:38.052 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+14:43:23.325 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+14:43:23.680 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+14:43:23.680 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+14:43:23.681 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+14:43:23.682 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:14:54.603 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:14:54.797 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:14:54.797 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:14:54.798 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:14:54.800 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:15:07.073 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:15:07.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:15:07.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:15:23.969 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:15:23.970 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:15:23.970 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:15:23.970 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:15:23.971 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:23:55.395 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:23:55.397 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:23:55.579 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:23:55.580 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:23:55.581 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:23:55.582 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:23:55.583 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:24:02.688 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:24:02.688 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:24:02.689 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:24:02.689 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:24:02.689 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:24:02.807 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:24:06.454 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Save Button
+15:25:11.006 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:25:11.008 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:25:11.191 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:25:11.191 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:25:11.192 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:25:11.193 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:25:11.194 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:25:19.368 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:25:19.375 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+15:29:16.614 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:29:16.617 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:29:16.801 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:29:16.801 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:29:16.802 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:29:16.803 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:29:16.803 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:29:22.184 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:29:22.184 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:29:22.185 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:29:22.185 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:29:22.185 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:29:22.262 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:29:24.468 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Clean Form Data
+15:29:24.483 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Clean Form Data
+15:29:24.484 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Save Button
+15:29:39.279 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:29:39.285 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+15:29:40.695 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:29:40.695 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:29:40.695 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:29:40.696 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:29:40.696 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:29:40.696 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:29:40.696 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:29:48.359 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:29:48.359 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:29:48.360 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:29:48.360 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:29:48.360 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:29:48.416 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:29:50.236 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Clean Form Data
+15:29:50.237 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Clean Form Data
+15:29:50.237 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Save Button
+15:29:54.495 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:29:54.501 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+15:29:56.413 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:29:56.413 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:29:56.414 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:29:56.414 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:29:56.414 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:29:56.415 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:29:56.415 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:30:22.626 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:30:22.628 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:30:22.801 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:30:22.801 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:30:22.802 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:30:22.803 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:30:22.803 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:30:29.119 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:30:29.119 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:30:29.120 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:30:29.120 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:30:29.120 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:30:29.173 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:30:30.460 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Clean Form Data
+15:30:30.461 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Clean Form Data
+15:30:30.461 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:30:30.461 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:30:30.462 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:30:30.462 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:30:30.462 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:30:30.462 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:30:30.463 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:30:30.463 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Save Button
+15:30:32.119 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:30:32.124 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+15:32:41.202 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:32:41.204 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:32:41.402 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:32:41.402 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:32:41.403 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:32:41.404 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:32:41.405 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:32:46.055 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:32:46.060 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+15:33:59.536 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:33:59.539 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:33:59.742 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:33:59.743 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:33:59.744 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:33:59.745 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:37:59.094 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:37:59.096 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:37:59.323 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:37:59.323 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:37:59.324 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:37:59.325 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:37:59.326 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:38:05.086 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:38:05.086 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:38:05.087 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:38:05.087 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:38:05.123 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type) values (?, ?)
+15:39:23.681 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:39:23.684 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:39:23.878 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:39:23.878 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:39:23.879 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:39:23.880 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:39:23.881 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:39:28.734 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Save Button
+15:39:28.734 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:39:28.735 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:39:28.735 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:39:28.745 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Insert Operation->insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)
+15:39:28.803 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Insert Operation->insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)
+15:39:33.187 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Clean Form Data
+15:39:33.188 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Clean Form Data
+15:39:33.188 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+15:39:33.188 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+15:39:33.189 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+15:39:33.189 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+15:39:33.189 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+15:39:33.189 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+15:39:33.190 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+15:39:33.190 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Save Button
+15:41:46.678 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+15:41:46.684 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+16:27:49.102 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+16:27:49.104 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+16:27:49.299 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+16:27:49.299 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+16:27:49.300 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+16:27:49.301 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+16:27:49.302 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+16:27:57.703 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+16:27:57.709 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+16:36:21.256 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+16:36:21.259 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+16:36:21.435 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+16:36:21.435 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+16:36:21.436 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+16:36:21.437 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+16:36:21.437 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
+16:36:37.285 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
+16:36:37.292 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button

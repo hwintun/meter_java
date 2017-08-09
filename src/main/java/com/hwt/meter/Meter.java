@@ -35,7 +35,7 @@ public class Meter extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Meter");
-        setLocation(new java.awt.Point(300, 200));
+        setLocation(new java.awt.Point(0, 0));
         setResizable(false);
 
         jMenu1.setText("File");
@@ -76,10 +76,11 @@ public class Meter extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        new Charges().setVisible(true);
+        new Charges(this, true).setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItemExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExitActionPerformed

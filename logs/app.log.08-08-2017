@@ -1,0 +1,51 @@
+14:55:30.101 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+14:55:30.382 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+14:55:30.383 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:04:59.615 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:06:24.525 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:08:16.196 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:08:16.482 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:08:16.482 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:08:16.483 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:08:16.484 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:15:03.107 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:15:03.350 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:15:03.351 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:15:25.134 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:18:45.904 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:18:46.126 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:18:46.127 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:18:52.680 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:21:39.999 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:25:25.435 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:25:25.667 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:25:25.667 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:25:25.668 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:26:34.214 [main] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:35:56.032 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:35:56.217 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:35:56.217 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:35:56.218 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:35:56.219 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:41:22.065 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:41:22.260 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:41:22.261 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:41:22.261 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:41:22.263 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:48:49.508 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:48:49.709 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:48:49.709 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:48:49.710 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:48:49.711 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+15:59:27.895 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+15:59:28.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+15:59:28.074 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+15:59:28.075 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+15:59:28.076 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges
+16:02:37.832 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: AAA
+16:02:38.048 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Connection to SQLite has been estiblished.
+16:02:38.049 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: AAA
+16:02:38.050 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - Start: Query->select * from unit_per_charges
+16:02:38.052 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLiteJDBCDriverConnection - End: Query->select * from unit_per_charges

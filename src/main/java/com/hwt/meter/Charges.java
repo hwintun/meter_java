@@ -5,27 +5,31 @@
  */
 package com.hwt.meter;
 
+import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
  * @author HWT
  */
-public class Charges extends javax.swing.JFrame {
-
+public class Charges extends javax.swing.JDialog {
+    public static Logger LOGGER = LogManager.getLogger(Charges.class);
     /**
      * Creates new form Charges
+     * @param parent
+     * @param modal
      */
-    public Charges() {
+    public Charges(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
-        
         loadData();
         ListSelectionModel rowSM = jTable1.getSelectionModel();
         rowSM.addListSelectionListener((ListSelectionEvent e) -> {
@@ -33,6 +37,7 @@ public class Charges extends javax.swing.JFrame {
                 return;
             ListSelectionModel lsm = (ListSelectionModel) e.getSource();
             if(lsm.isSelectionEmpty()) {
+                lsm.clearSelection();
                 System.out.println("No rows are selected!");
             } else {
                 int selectRow = lsm.getMinSelectionIndex();
@@ -53,10 +58,19 @@ public class Charges extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jButtonSave = new javax.swing.JButton();
+        jButtonClose = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBoxMeterType = new javax.swing.JComboBox<>();
+        jTextFieldUnitPerCharges = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Unit Per Charges");
+        setResizable(false);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,27 +83,129 @@ public class Charges extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setRowHeight(20);
         jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable1);
+
+        jButtonSave.setText("Save");
+        jButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSaveActionPerformed(evt);
+            }
+        });
+
+        jButtonClose.setText("Close");
+        jButtonClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCloseActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Meter Type");
+
+        jLabel2.setText("Unit Per Charges");
+
+        jComboBoxMeterType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electricity", "Water" }));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addGap(53, 53, 53)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButtonClose))
+                    .addComponent(jComboBoxMeterType, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldUnitPerCharges, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(173, Short.MAX_VALUE))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonClose, jButtonSave});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBoxMeterType, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldUnitPerCharges, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonClose))
+                .addContainerGap())
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonClose, jButtonSave});
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jComboBoxMeterType, jTextFieldUnitPerCharges});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
+        LOGGER.info("Start Performe: Save Button");
+        SQLite.connect();
+        Map<Integer, String> param = new HashMap<>();
+        param.put(1, jTextFieldUnitPerCharges.getText().trim());
+        param.put(2, jComboBoxMeterType.getSelectedItem().toString());
+        param.put(3, LocalDateTime.now().toString());
+        Integer result = SQLite.insert("insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)", param);
+        if(result > 0){
+            JOptionPane.showMessageDialog(this, "Sucessfully SAVE!");
+            clearFormData();
+            loadData();
+        } else {
+            JOptionPane.showMessageDialog(this, "Unsucessfully SAVE!");
+        }
+        LOGGER.info("End Performe: Save Button");
+    }//GEN-LAST:event_jButtonSaveActionPerformed
+
+    private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
+        LOGGER.info("Start Performe: Close Button");
+        this.dispose();
+        LOGGER.info("End Performe: Close Button");
+    }//GEN-LAST:event_jButtonCloseActionPerformed
+
+    private void clearFormData() {
+        LOGGER.info("Start Performe: Clean Form Data");
+        jTextFieldUnitPerCharges.setText("");
+        jComboBoxMeterType.setSelectedIndex(0);
+        LOGGER.info("End Performe: Clean Form Data");
+    }
+    
     private void loadData() {
-        SQLiteJDBCDriverConnection.connect();
+        LOGGER.info("Start Performe: Data Load");
+        SQLite.connect();
         jTable1.setModel(new AbstractTableModel() {
-            Object[] result = SQLiteJDBCDriverConnection.query("select * from unit_per_charges");
+            Object[] result = SQLite.query("select * from unit_per_charges");
             
             List colName = (List)result[0];
             List data = (List)result[1];
@@ -101,6 +217,9 @@ public class Charges extends javax.swing.JFrame {
 
             @Override
             public int getColumnCount() {
+                if(data.isEmpty()) {
+                    return 0;
+                }
                 return ((List) data.get(0)).size();
             }
 
@@ -114,7 +233,9 @@ public class Charges extends javax.swing.JFrame {
                 return colName.get(col).toString();
             }
         });
+        LOGGER.info("End Performe: Data Load");
     }
+        
     /**
      * @param args the command line arguments
      */
@@ -141,17 +262,32 @@ public class Charges extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Charges.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Charges().setVisible(true);
+                Charges dialog = new Charges(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jButtonClose;
+    private javax.swing.JButton jButtonSave;
+    private javax.swing.JComboBox<String> jComboBoxMeterType;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextFieldUnitPerCharges;
     // End of variables declaration//GEN-END:variables
 }

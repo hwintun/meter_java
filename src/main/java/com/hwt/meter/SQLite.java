@@ -7,6 +7,7 @@ package com.hwt.meter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Vector;
+import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,8 +24,8 @@ import org.apache.logging.log4j.Logger;
  *
  * @author HWT
  */
-public class SQLiteJDBCDriverConnection {
-    public static Logger LOGGER = LogManager.getLogger(SQLiteJDBCDriverConnection.class);
+public class SQLite {
+    public static Logger LOGGER = LogManager.getLogger(SQLite.class);
     private static Connection connection = null;
     
     public static void connect() {
@@ -51,13 +52,15 @@ public class SQLiteJDBCDriverConnection {
     
     public static Object[] query(String sql){
         LOGGER.info("Start: Query->" + sql);
+        Statement stmt = null;
+        ResultSet rs = null;
         List<Object> data1;
         //Map<String, Object> row;
         List<String> colName;
         List<Object> data;
         try {
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
+            stmt = connection.createStatement();
+            rs = stmt.executeQuery(sql);
             ResultSetMetaData meta = rs.getMetaData();
             
             //data = new ArrayList<>();
@@ -75,13 +78,36 @@ public class SQLiteJDBCDriverConnection {
                     row.add(rs.getObject(meta.getColumnName(i)));
                 }
                 data.add(row);
-            }            
+            }
+            rs.close();
+            stmt.close();
             LOGGER.info("End: Query->" + sql);
             return new Object[]{colName, data};
         } catch (SQLException e) {
             e.printStackTrace();
             LOGGER.error(Arrays.toString(e.getStackTrace()));
-            return null;
+            return new Object[]{new ArrayList<>(), new ArrayList<>()};
+        } finally {
+            close();
+        }
+    }
+    
+    public static Integer insert(String sql, Map<Integer, String> param) {
+        LOGGER.info("Start: Insert Operation->" + sql);
+        try {
+            connection.setAutoCommit(false);
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            for(Map.Entry<Integer, String> p : param.entrySet()){
+                stmt.setObject(p.getKey(), p.getValue());
+            }
+            int result = stmt.executeUpdate();
+            stmt.close();
+            connection.commit();
+            LOGGER.info("End: Insert Operation->" + sql);
+            return result;
+        } catch (SQLException e) {
+            LOGGER.error(Arrays.toString(e.getStackTrace()));
+            return 0;
         } finally {
             close();
         }
