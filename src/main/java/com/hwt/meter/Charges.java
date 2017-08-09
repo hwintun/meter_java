@@ -33,15 +33,20 @@ public class Charges extends javax.swing.JDialog {
         loadData();
         ListSelectionModel rowSM = jTable1.getSelectionModel();
         rowSM.addListSelectionListener((ListSelectionEvent e) -> {
+            boolean toggle = false;
             if(e.getValueIsAdjusting())
                 return;
             ListSelectionModel lsm = (ListSelectionModel) e.getSource();
             if(lsm.isSelectionEmpty()) {
-                lsm.clearSelection();
                 System.out.println("No rows are selected!");
             } else {
                 int selectRow = lsm.getMinSelectionIndex();
-                
+                if(jTable1.isRowSelected(selectRow) && toggle) {
+                    toggle = true;
+                    jTable1.removeRowSelectionInterval(selectRow, selectRow);
+                } else {
+                    jTable1.addRowSelectionInterval(selectRow, selectRow);
+                }
                 System.out.println("Row " + selectRow + " is selected!");
                 System.out.println(jTable1.getValueAt(selectRow, 1));
                 
