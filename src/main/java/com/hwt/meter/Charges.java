@@ -189,19 +189,24 @@ public class Charges extends javax.swing.JDialog {
 
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
         LOGGER.info("Start Performe: Save Button");
-        SQLite.connect();
-        Map<Integer, String> param = new HashMap<>();
-        param.put(1, jTextFieldUnitPerCharges.getText().trim());
-        param.put(2, jComboBoxMeterType.getSelectedItem().toString());
-        param.put(3, LocalDateTime.now().toString());
-        Integer result = SQLite.insert("insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)", param);
-        if(result > 0){
-            JOptionPane.showMessageDialog(this, "Sucessfully SAVE!");
+        if(jButtonSave.getText().equalsIgnoreCase("New")) {
+            jButtonSave.setText("Save");
             clearFormData();
-            loadData();
         } else {
-            JOptionPane.showMessageDialog(this, "Unsucessfully SAVE!");
-        }
+            SQLite.connect();
+            Map<Integer, String> param = new HashMap<>();
+            param.put(1, jTextFieldUnitPerCharges.getText().trim());
+            param.put(2, jComboBoxMeterType.getSelectedItem().toString());
+            param.put(3, LocalDateTime.now().toString());
+            Integer result = SQLite.insert("insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)", param);
+            if(result > 0){
+                JOptionPane.showMessageDialog(this, "Sucessfully SAVE!");
+                clearFormData();
+                loadData();
+            } else {
+                JOptionPane.showMessageDialog(this, "Unsucessfully SAVE!");
+            }
+        }        
         LOGGER.info("End Performe: Save Button");
     }//GEN-LAST:event_jButtonSaveActionPerformed
 
@@ -215,6 +220,7 @@ public class Charges extends javax.swing.JDialog {
         if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1 && evt.getClickCount() == 2){
             jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
             jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
+            jButtonSave.setText("New");
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
