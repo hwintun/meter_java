@@ -41,12 +41,12 @@ public class Charges extends javax.swing.JDialog {
                 System.out.println("No rows are selected!");
             } else {
                 int selectRow = lsm.getMinSelectionIndex();
-                if(jTable1.isRowSelected(selectRow) && toggle) {
+                /*if(jTable1.isRowSelected(selectRow) && toggle) {
                     toggle = true;
                     jTable1.removeRowSelectionInterval(selectRow, selectRow);
                 } else {
                     jTable1.addRowSelectionInterval(selectRow, selectRow);
-                }
+                }*/
                 System.out.println("Row " + selectRow + " is selected!");
                 System.out.println(jTable1.getValueAt(selectRow, 1));
                 
@@ -91,9 +91,14 @@ public class Charges extends javax.swing.JDialog {
         ));
         jTable1.setRowHeight(20);
         jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
-        jButtonSave.setText("New");
+        jButtonSave.setText("Save");
         jButtonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveActionPerformed(evt);
@@ -114,6 +119,7 @@ public class Charges extends javax.swing.JDialog {
         jComboBoxMeterType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electricity", "Water" }));
 
         jButtonEdit.setText("Edit");
+        jButtonEdit.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -204,6 +210,13 @@ public class Charges extends javax.swing.JDialog {
         this.dispose();
         LOGGER.info("End Performe: Close Button");
     }//GEN-LAST:event_jButtonCloseActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1 && evt.getClickCount() == 2){
+            jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+            jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
     private void clearFormData() {
         LOGGER.info("Start Performe: Clean Form Data");
