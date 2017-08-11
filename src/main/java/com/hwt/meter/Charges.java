@@ -5,7 +5,9 @@
  */
 package com.hwt.meter;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -120,6 +122,11 @@ public class Charges extends javax.swing.JDialog {
 
         jButtonEdit.setText("Edit");
         jButtonEdit.setEnabled(false);
+        jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,6 +198,8 @@ public class Charges extends javax.swing.JDialog {
         LOGGER.info("Start Performe: Save Button");
         if(jButtonSave.getText().equalsIgnoreCase("New")) {
             jButtonSave.setText("Save");
+            jButtonEdit.setEnabled(false);
+            jTable1.clearSelection();
             clearFormData();
         } else {
             SQLite.connect();
@@ -198,7 +207,12 @@ public class Charges extends javax.swing.JDialog {
             param.put(1, jTextFieldUnitPerCharges.getText().trim());
             param.put(2, jComboBoxMeterType.getSelectedItem().toString());
             param.put(3, LocalDateTime.now().toString());
-            Integer result = SQLite.insert("insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)", param);
+            Integer result = 0;
+            try {
+                result = SQLite.insert("insert into unit_per_charges (charges, type, update_on) values (?, ?, ?)", param);
+            } catch (SQLException ex) {
+                LOGGER.error(Arrays.toString(ex.getStackTrace()));
+            }
             if(result > 0){
                 JOptionPane.showMessageDialog(this, "Sucessfully SAVE!");
                 clearFormData();
@@ -217,12 +231,23 @@ public class Charges extends javax.swing.JDialog {
     }//GEN-LAST:event_jButtonCloseActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1 && evt.getClickCount() == 1){
+            jButtonEdit.setEnabled(true);
+        }
         if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1 && evt.getClickCount() == 2){
             jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
             jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
             jButtonSave.setText("New");
         }
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditActionPerformed
+        if(jButtonSave.getText().equalsIgnoreCase("Save")) {
+            jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+            jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
+            jButtonSave.setText("New");
+        }
+    }//GEN-LAST:event_jButtonEditActionPerformed
 
     private void clearFormData() {
         LOGGER.info("Start Performe: Clean Form Data");

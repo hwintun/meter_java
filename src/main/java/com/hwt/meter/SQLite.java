@@ -92,7 +92,7 @@ public class SQLite {
         }
     }
     
-    public static Integer insert(String sql, Map<Integer, String> param) {
+    public static Integer insert(String sql, Map<Integer, String> param) throws SQLException {
         LOGGER.info("Start: Insert Operation->" + sql);
         try {
             connection.setAutoCommit(false);
@@ -106,11 +106,27 @@ public class SQLite {
             LOGGER.info("End: Insert Operation->" + sql);
             return result;
         } catch (SQLException e) {
+            connection.rollback();
             LOGGER.error(Arrays.toString(e.getStackTrace()));
             return 0;
         } finally {
             close();
         }
+    }
+    
+    public static Integer delete(String sql) {
+        LOGGER.info("Start: Insert Operation->" + sql);
+        Statement stmt = null;
+        try {
+            stmt = connection.createStatement();
+            Integer result = stmt.executeUpdate(sql);
+            stmt.close();
+            LOGGER.info("End: Insert Operation->" + sql);
+            return result;
+        } catch (SQLException e) {
+            LOGGER.error(Arrays.toString(e.getStackTrace()));
+            return 0;
+        }        
     }
 }
 
