@@ -114,6 +114,28 @@ public class SQLite {
         }
     }
     
+    public static Integer update(String sql, Map<Integer, String> param) throws SQLException {
+        LOGGER.info("Start: Insert Operation->" + sql);
+        try {
+            connection.setAutoCommit(false);
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            for(Map.Entry<Integer, String> p : param.entrySet()){
+                stmt.setObject(p.getKey(), p.getValue());
+            }
+            int result = stmt.executeUpdate();
+            stmt.close();
+            connection.commit();
+            LOGGER.info("End: Insert Operation->" + sql);
+            return result;
+        } catch (SQLException e) {
+            connection.rollback();
+            LOGGER.error(Arrays.toString(e.getStackTrace()));
+            return 0;
+        } finally {
+            close();
+        }
+    }
+    
     public static Integer delete(String sql) {
         LOGGER.info("Start: Insert Operation->" + sql);
         Statement stmt = null;

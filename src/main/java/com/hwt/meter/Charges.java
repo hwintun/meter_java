@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class Charges extends javax.swing.JDialog {
     public static Logger LOGGER = LogManager.getLogger(Charges.class);
+    private String id = "";
     /**
      * Creates new form Charges
      * @param parent
@@ -237,7 +238,12 @@ public class Charges extends javax.swing.JDialog {
         if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1 && evt.getClickCount() == 2){
             jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
             jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
+            jButtonEdit.setEnabled(true);
             jButtonSave.setText("New");
+            jButtonEdit.setText("Update");
+        }
+        if(evt.getButton() == java.awt.event.MouseEvent.BUTTON1) {
+            this.id = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -246,6 +252,28 @@ public class Charges extends javax.swing.JDialog {
             jComboBoxMeterType.setSelectedItem(jTable1.getValueAt(jTable1.getSelectedRow(), 2));
             jTextFieldUnitPerCharges.setText(jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString());
             jButtonSave.setText("New");
+            jButtonEdit.setText("Update");
+            this.id = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
+        } else if(jButtonEdit.getText().equalsIgnoreCase("update")) {
+            Integer result = 0;
+            SQLite.connect();
+            Map<Integer, String> param = new HashMap<>();
+            param.put(1, jTextFieldUnitPerCharges.getText().trim());
+            param.put(2, jComboBoxMeterType.getSelectedItem().toString());
+            param.put(3, LocalDateTime.now().toString());
+            param.put(4, id);
+            try {
+                result = SQLite.insert("update unit_per_charges set charges = ?, type = ?, update_on = ? where id = ?", param);
+            } catch (SQLException ex) {
+                LOGGER.error(Arrays.toString(ex.getStackTrace()));
+            }
+            if(result > 0){
+                JOptionPane.showMessageDialog(this, "Sucessfully UPDATE!");
+                clearFormData();
+                loadData();
+            } else {
+                JOptionPane.showMessageDialog(this, "Unsucessfully UPDATE!");
+            }
         }
     }//GEN-LAST:event_jButtonEditActionPerformed
 
