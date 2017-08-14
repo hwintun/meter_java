@@ -264,3 +264,10 @@
 13:31:54.480 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load
 13:32:04.095 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Close Button
 13:32:04.107 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Close Button
+17:00:47.264 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - Start Performe: Data Load
+17:00:47.282 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: AAA
+17:00:47.878 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Connection to SQLite has been estiblished.
+17:00:47.878 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: AAA
+17:00:47.879 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - Start: Query->select * from unit_per_charges
+17:00:47.880 [AWT-EventQueue-0] INFO  com.hwt.meter.SQLite - End: Query->select * from unit_per_charges
+17:00:47.880 [AWT-EventQueue-0] INFO  com.hwt.meter.Charges - End Performe: Data Load

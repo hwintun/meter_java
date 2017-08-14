@@ -54,6 +54,13 @@
             <artifactId>dynamicreports-googlecharts</artifactId>
             <version>5.0.0</version>
         </dependency>
+        
+        <!-- SwingX -->
+        <dependency>
+            <groupId>org.swinglabs</groupId>
+            <artifactId>swingx</artifactId>
+            <version>1.6.1</version>
+        </dependency>
     </dependencies>
     
     <build>

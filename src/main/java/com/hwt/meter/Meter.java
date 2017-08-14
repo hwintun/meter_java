@@ -32,6 +32,8 @@ public class Meter extends javax.swing.JFrame {
         jMenuItemExit = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItemNormalRoom = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Meter");
@@ -62,6 +64,18 @@ public class Meter extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setText("Register");
+
+        jMenuItemNormalRoom.setText("Normal");
+        jMenuItemNormalRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemNormalRoomActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItemNormalRoom);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -86,6 +100,10 @@ public class Meter extends javax.swing.JFrame {
     private void jMenuItemExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExitActionPerformed
         this.dispose();
     }//GEN-LAST:event_jMenuItemExitActionPerformed
+
+    private void jMenuItemNormalRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNormalRoomActionPerformed
+        new NormalRoom(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItemNormalRoomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,8 +143,10 @@ public class Meter extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemExit;
+    private javax.swing.JMenuItem jMenuItemNormalRoom;
     // End of variables declaration//GEN-END:variables
 }

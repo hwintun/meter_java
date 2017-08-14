@@ -167,8 +167,9 @@ CREATE TABLE meter_bill (
     total_unit       DECIMAL (8, 2) NOT NULL
                                     DEFAULT (0),
     unit_per_charges DECIMAL (8, 2) NOT NULL,
-    created_on       DATETIME       DEFAULT now,
-    updated_on       DATETIME       DEFAULT now
+    created_on       DATETIME,
+    updated_on       DATETIME,
+    room_id          TEXT
 );
 
 unit_per_charges DDL
