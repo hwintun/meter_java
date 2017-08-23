@@ -54,8 +54,6 @@ public class SQLite {
         LOGGER.info("Start: Query->" + sql);
         Statement stmt = null;
         ResultSet rs = null;
-        List<Object> data1;
-        //Map<String, Object> row;
         List<String> colName;
         List<Object> data;
         try {

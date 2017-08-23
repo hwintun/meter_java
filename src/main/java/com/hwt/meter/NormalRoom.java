@@ -5,21 +5,31 @@
  */
 package com.hwt.meter;
 
-import java.text.DateFormat;
+import static com.hwt.meter.Charges.LOGGER;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import javafx.util.converter.LocalDateStringConverter;
+import java.util.List;
+import javax.swing.JTable;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
  * @author HWT
  */
 public class NormalRoom extends javax.swing.JDialog {
+    
+    private static final String ROOM_1 = "1";
+    private static final String ROOM_2 = "2";
+    private static final String ROOM_3 = "3";
 
     /**
      * Creates new form NormalRoom
+     * @param parent
+     * @param modal
      */
     public NormalRoom(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -80,8 +90,18 @@ public class NormalRoom extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButtonRoom1.setText("Room 1");
+        jButtonRoom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom1ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom2.setText("Room 2");
+        jButtonRoom2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom2ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom3.setText("Room 3");
 
@@ -339,13 +359,10 @@ public class NormalRoom extends javax.swing.JDialog {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -389,6 +406,67 @@ public class NormalRoom extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_jButtonCloseActionPerformed
 
+    private void jButtonRoom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom1ActionPerformed
+        fillDataTable(ROOM_1);
+    }//GEN-LAST:event_jButtonRoom1ActionPerformed
+
+    private void jButtonRoom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom2ActionPerformed
+        fillDataTable(ROOM_2);
+    }//GEN-LAST:event_jButtonRoom2ActionPerformed
+
+    private void fillDataTable(String roomId){
+        LOGGER.info("Start Performe: Data Load");
+        SQLite.connect();
+        jTable1.setModel(new AbstractTableModel() {
+            Object[] result = SQLite.query("select id, room_id, start_date, end_date, start_unit, end_unit, total_unit from meter_bill where room_id='" + roomId + "'");
+            
+            List colName = (List)result[0];
+            List data = (List)result[1];
+            
+            @Override
+            public int getRowCount() {
+                return data.size();
+            }
+
+            @Override
+            public int getColumnCount() {
+                if(data.isEmpty()) {
+                    return 0;
+                }
+                return ((List) data.get(0)).size();
+            }
+
+            @Override
+            public Object getValueAt(int rowIndex, int columnIndex) {
+                return ((List) data.get(rowIndex)).get(columnIndex);
+            }
+            
+            @Override
+            public String getColumnName(int col) {
+                return colName.get(col).toString();
+            }
+        });
+        List<Integer> colWidth = new ArrayList<>();
+        colWidth.add(0, 30);
+        colWidth.add(1, 50);
+        colWidth.add(2, 90);
+        colWidth.add(3, 90);
+        colWidth.add(4, 80);
+        colWidth.add(5, 80);
+        colWidth.add(6, 80);
+        jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        resizeColumnWidth(colWidth);
+        LOGGER.info("End Performe: Data Load");        
+    }
+    
+    private void resizeColumnWidth(final List<Integer> colWidth){
+        System.out.println("****");
+        final TableColumnModel column = jTable1.getColumnModel();
+        for (int i = 0; i < column.getColumnCount(); i++) {
+            column.getColumn(i).setPreferredWidth(colWidth.get(i));
+        }
+    }
+    
     private void loadDefaultData() {
         jXDatePicker1.setFormats(new SimpleDateFormat("yyyy-MM-dd"));
         jXDatePicker1.setDate(new Date(System.currentTimeMillis()));
