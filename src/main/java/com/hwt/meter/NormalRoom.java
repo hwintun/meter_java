@@ -22,9 +22,15 @@ import javax.swing.table.TableColumnModel;
  */
 public class NormalRoom extends javax.swing.JDialog {
     
+    private static String currentRoom = "";
     private static final String ROOM_1 = "1";
     private static final String ROOM_2 = "2";
     private static final String ROOM_3 = "3";
+    private static final String ROOM_4 = "4";
+    private static final String ROOM_5 = "5";
+    private static final String ROOM_6 = "6";
+    private static final String ROOM_7 = "7";
+    private static final String ROOM_8 = "8";
 
     /**
      * Creates new form NormalRoom
@@ -104,16 +110,46 @@ public class NormalRoom extends javax.swing.JDialog {
         });
 
         jButtonRoom3.setText("Room 3");
+        jButtonRoom3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom3ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom4.setText("Room 4");
+        jButtonRoom4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom4ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom5.setText("Room 5");
+        jButtonRoom5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom5ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom6.setText("Room 6");
+        jButtonRoom6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom6ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom7.setText("Room 7");
+        jButtonRoom7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom7ActionPerformed(evt);
+            }
+        });
 
         jButtonRoom8.setText("Room 8");
+        jButtonRoom8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRoom8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -407,12 +443,44 @@ public class NormalRoom extends javax.swing.JDialog {
     }//GEN-LAST:event_jButtonCloseActionPerformed
 
     private void jButtonRoom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom1ActionPerformed
+        this.currentRoom = ROOM_1;
         fillDataTable(ROOM_1);
     }//GEN-LAST:event_jButtonRoom1ActionPerformed
 
     private void jButtonRoom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom2ActionPerformed
+        this.currentRoom = ROOM_2;
         fillDataTable(ROOM_2);
     }//GEN-LAST:event_jButtonRoom2ActionPerformed
+
+    private void jButtonRoom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom3ActionPerformed
+        this.currentRoom = ROOM_3;
+        fillDataTable(ROOM_3);
+    }//GEN-LAST:event_jButtonRoom3ActionPerformed
+
+    private void jButtonRoom4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom4ActionPerformed
+        this.currentRoom = ROOM_4;
+        fillDataTable(ROOM_4);
+    }//GEN-LAST:event_jButtonRoom4ActionPerformed
+
+    private void jButtonRoom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom5ActionPerformed
+        this.currentRoom = ROOM_5;
+        fillDataTable(ROOM_5);
+    }//GEN-LAST:event_jButtonRoom5ActionPerformed
+
+    private void jButtonRoom6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom6ActionPerformed
+        this.currentRoom = ROOM_6;
+        fillDataTable(ROOM_6);
+    }//GEN-LAST:event_jButtonRoom6ActionPerformed
+
+    private void jButtonRoom7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom7ActionPerformed
+        this.currentRoom = ROOM_7;
+        fillDataTable(ROOM_7);
+    }//GEN-LAST:event_jButtonRoom7ActionPerformed
+
+    private void jButtonRoom8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRoom8ActionPerformed
+        this.currentRoom = ROOM_8;
+        fillDataTable(ROOM_8);
+    }//GEN-LAST:event_jButtonRoom8ActionPerformed
 
     private void fillDataTable(String roomId){
         LOGGER.info("Start Performe: Data Load");
