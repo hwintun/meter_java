@@ -38,21 +38,16 @@
             <scope>test</scope>
         </dependency>
         
-        <!-- DyanmicReports libs -->
+        <!-- Jasper Report libs -->
         <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-core</artifactId>
-            <version>5.0.0</version>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.4.1</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-adhoc</artifactId>
-            <version>5.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-googlecharts</artifactId>
-            <version>5.0.0</version>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-fonts</artifactId>
+            <version>6.0.0</version>
         </dependency>
         
         <!-- SwingX -->
@@ -79,6 +74,41 @@
                 <configuration>
                     <mainClass>com.hwt.meter.Meter</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jasperreports-maven-plugin</artifactId>
+                <version>1.0-beta-2</version>
+                <configuration>
+                    <outputDirectory>${project.build.outputDirectory}/reports</outputDirectory>
+                </configuration>
+                <executions>
+                    <!-- We need to wait until after the java classes have been compiled to compile the reports -->
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                          <goal>compile-reports</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>jasperreports-maven-plugin</artifactId>
+                        <version>1.0-beta-2</version>
+                        <exclusions>
+                          <exclusion>
+                            <groupId>jasperreports</groupId>
+                            <artifactId>jasperreports</artifactId>
+                          </exclusion>
+                        </exclusions>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sf.jasperreports</groupId>
+                        <artifactId>jasperreports</artifactId>
+                        <version>6.4.1</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <!--
