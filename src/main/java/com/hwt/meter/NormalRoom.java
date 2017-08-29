@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableColumnModel;
@@ -202,6 +203,11 @@ public class NormalRoom extends javax.swing.JDialog {
         jLabel1.setText("Target Month");
 
         jComboBoxTargetMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- SELECT ONE --", "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUN", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" }));
+        jComboBoxTargetMonth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTargetMonthActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Start");
 
@@ -481,6 +487,10 @@ public class NormalRoom extends javax.swing.JDialog {
         this.currentRoom = ROOM_8;
         fillDataTable(ROOM_8);
     }//GEN-LAST:event_jButtonRoom8ActionPerformed
+
+    private void jComboBoxTargetMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTargetMonthActionPerformed
+        
+    }//GEN-LAST:event_jComboBoxTargetMonthActionPerformed
 
     private void fillDataTable(String roomId){
         LOGGER.info("Start Performe: Data Load");
