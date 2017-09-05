@@ -156,6 +156,8 @@ CREATE TABLE meter_bill (
     id               INTEGER        PRIMARY KEY AUTOINCREMENT
                                     UNIQUE
                                     NOT NULL,
+    room_id          TEXT,
+    target_month     INTEGER,
     start_date       DATE,
     end_date         DATE,
     start_unit       DECIMAL (8, 2) NOT NULL
@@ -166,9 +168,9 @@ CREATE TABLE meter_bill (
                                     DEFAULT (0),
     unit_per_charges DECIMAL (8, 2) NOT NULL,
     created_on       DATETIME,
-    updated_on       DATETIME,
-    room_id          TEXT
+    updated_on       DATETIME
 );
+
 
 unit_per_charges DDL
 CREATE TABLE unit_per_charges (
